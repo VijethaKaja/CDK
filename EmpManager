@@ -1,0 +1,104 @@
+import java.util.Scanner;
+class Emp {
+	private int empno;
+	private String ename;
+	private double salary;
+  public int getEmpno() {
+		return empno;
+	}
+  public void setEmpno(int empno) {
+		this.empno = empno;
+	}
+  public String getEname() {
+		return ename;
+	}
+  public void setEname(String ename) {
+		this.ename = ename;
+	}
+  public double getSalary() {
+		return salary;
+	}
+  public void setSalary(double salary) {
+		this.salary = salary;
+	}
+}
+class EmpManager{
+  int current=0;
+  private Emp emp[]=new Emp[10];
+  public void create(Emp e)
+  {
+	  emp[current]=e;
+	  current+=1;
+   }
+   public void update(int itemno,Emp e)
+   {
+	   emp[itemno]=e;
+   }
+   public void delete(int empno)
+   {
+	   int value=-99;
+	   for(int i=0;i<current;i++)
+	   {
+		   if(emp[i].getEmpno()==empno)
+		   {
+			   value=i;
+			   break;
+		   }
+	   }
+	   for(int i=value;i<current;i++)
+	   {
+		   emp[i]=emp[i+1];
+	   }
+	   current-=1;
+   	}
+   public void print()
+   {
+	   for(int i=0;i<current;i++)
+	   {
+		   System.out.println(emp[i]);
+	   }
+   	}
+}
+public class Empdetails
+{
+	public static void main(String args[]) {
+		EmpManager e1=new EmpManager();
+		Emp e2=new Emp();
+		String s;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter an operation to perform: ");
+		while(true) {
+		 s=sc.next();
+		if (s.equals("CREATE"))
+		{
+			e2.setEmpno(sc.nextInt());
+			e2.setEname(sc.next());
+			e2.setSalary(sc.nextDouble());
+			e1.create(e2);
+		}
+		else if (s.equals("UPDATE"))
+		{
+			int n=sc.nextInt();
+			e2.setEmpno(sc.nextInt());
+			e2.setEname(sc.next());
+			e2.setSalary(sc.nextDouble());
+			e1.update(n,e2);
+		}
+		else if (s.equals("UPDATE"))
+		{
+			e1.delete(sc.nextInt());
+		}
+		else if(s.equals("PRINT"))
+		{
+			e1.print();
+		}
+		else if(s.equals("STOP"))
+		{
+			break;
+		}
+		
+	}
+	
+	}
+}
+   
