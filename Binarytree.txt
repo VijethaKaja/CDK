@@ -1,0 +1,5 @@
+Binary tree
+1.has random access
+2.has dynamic memory allocation
+3.can access elements thriugh left,right pointers
+4.for fast insertion,deletion and searching, for pattern searching
