@@ -11,10 +11,10 @@ Linked List
 Stack
  *Supports sequential access
  *It supports static allocation and dynamic allocation
- *we can access elements by index
+ *we can access elements by index and pointers
  *it is used for infix to postfix conversion, balancing paranthesis, dfs....
 Queue
  *Supports sequential access
  *It supports static allocation and dynamic allocation
- *we can access elements by index
+ *we can access elements by index and pointers
  *it is used for cpu scheduling, bfs
