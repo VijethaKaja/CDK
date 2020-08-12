@@ -1,0 +1,15 @@
+Algorithm for adding an element at last:
+1.Traverse the linked list until next pointer becomes null
+2.make the next pointer of last node point to item
+3.make next pointer of item null
+Algorithm for adding an element at First:
+1.make the next pointer of item point to first element of linkedlist
+Algorithm for adding an element after B:
+1.traverse the linkedlist until you come across B
+2.store the next node from B in a new node
+3.make the next poiner of B point to E 
+4.make the next pointer of E point to new node
+Algorithm for removing an element:
+1.traverse the linkedlist until you come across a node whose next node is to be removed
+2.store the next node of object to be removed in new node
+3.make the previous node point to the new node
