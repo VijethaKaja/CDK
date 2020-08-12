@@ -9,12 +9,12 @@ Linked List
  *we can access elements by next pointers
  *it is used for storing and manipuating elements and  to implement stack and queues
 Stack
- *Supports random
+ *Supports sequential
  *It supports static allocation and dynamic allocation
  *we can access elements by index and pointers
  *it is used for infix to postfix conversion, balancing paranthesis, dfs....
 Queue
- *Supports random
+ *Supports sequential
  *It supports static allocation and dynamic allocation
  *we can access elements by index and pointers
  *it is used for cpu scheduling, bfs
