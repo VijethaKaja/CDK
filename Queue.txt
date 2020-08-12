@@ -1,0 +1,14 @@
+intialize a QUEUE,FRONT and REAR. 	
+front=-1
+rear=-1
+return
+Enqueue:
+To add or insert item to QUEUE. 
+If (rear=max) then display “Queue overflow” and return
+Otherwise update rear+=1 ,QUEUE(rear)=ITEM and return
+Dequeue
+To delete an item from QUEUE. 
+If (front=rear+1) then display “Queue underflow” and return
+Otherwise update ITEM=QUEUE(front), front+=1 and return
+ 
+    
