@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee data</title>
+<style>
+table{
+border: 1px solid black;
+}
+</style>
+<script type="text/javascript">
+function test1(){
+	var str = document.getElementById("1").value;
+	var num=document.getElementById("2").value;
+	var sal=document.getElementById("3").value;
+	document.getElementById("ename").innerHTML=str;
+	document.getElementById("eno").innerHTML=num;
+	document.getElementById("sal").innerHTML=sal;
+}
+
+</script>
+
+</head>
+<body>
+Employee Name : <input type="text" id="1" /><br/>
+Employee Number : <input type="number" id="2" /><br/>
+Salary: <input type="number" id="3" /><br/>
+<input  id ="btn" type="button" value="Add" onclick="test1()" />
+<div id="mydiv">
+<table><tr ><th>Employee Name</th><th>Employee Number</th><th>Salary</th></tr>
+<tr><td id="ename"></td><td id="eno"></td><td id="sal"></td></tr></table></div>
+
+</body>
+</html>
