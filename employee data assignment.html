@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>employee assignment</title>
+<style>
+table,th,td
+{
+border: 1px solid black;
+}
+</style>
+<script type="text/javascript">
+var company=new Object();
+var employee=new Array();
+function test(){
+	employee.push(document.getElementById("1").value,document.getElementById("2").value,document.getElementById("3").value);
+	company.ename=(document.getElementById("1").value);
+	company.eno=document.getElementById("2").value;
+	company.sal=parseInt(document.getElementById("3").value);
+	var table=document.getElementById("4");
+	var row=table.insertRow(-1);
+	var cell1 = row.insertCell(0);
+	cell1.innerHTML = company.ename;
+	cell1 = row.insertCell(1);
+	cell1.innerHTML = company.eno;
+	cell1 = row.insertCell(2);
+	cell1.innerHTML = company.sal;
+	}
+</script>
+</head>
+<body>
+Employee Name : <input type="text" id="1" /><br/>
+Employee Number : <input type="number" id="2" /><br/>
+Salary: <input type="number" id="3" /><br/>
+<input  id ="btn" type="button" value="Add employee" onclick="test()" />
+<div id="5">
+<table id="4">
+<tr>
+<th> Employee name</th>
+<th> Employee no.</th>
+<th> Employee salary</th>
+</table>
+</div>
+</body>
+</html>
