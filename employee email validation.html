@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Employee details</title>
+<script type="text/javascript">
+var employee=new Object();
+var email=new Array();
+var re = /\S+@\S+\.\S+/;
+var i=0;
+function test(){
+	employee.ename= document.getElementById("1").value;
+	employee.eno=document.getElementById("2").value;
+	employee.sal=parseInt(document.getElementById("3").value);
+	email.push(document.getElementById("4").value);
+	i+=1;
+	}
+function test1(){
+	if(re.test(email[i-1]))
+	document.getElementById("5").innerHTML="<b>Email is verified</b>";
+	else
+	document.getElementById("5").innerHTML="<b>Email is invalid</b>";	}
+function test2(){
+	employee.sal+=1;
+	document.getElementById("5").innerHTML="<b>"+employee.ename+"<br />"+employee.eno+"<br />"+employee.sal+"</b>";
+	}
+</script>
+</head>
+<body>
+Employee Name : <input type="text" id="1" /><br/>
+Employee Number : <input type="number" id="2" /><br/>
+Salary: <input type="number" id="3" /><br/>
+Email: <input type="email" id="4" /><br/>
+<input  id ="btn" type="button" value="Add" onclick="test()" />
+<input  id ="btn" type="button" value="Validate email" onclick="test1()" />
+<input  id ="btn1" type="button" value="Salary increment" onclick="test2()" />
+<div id="5"></div>
+</body>
+</html>
