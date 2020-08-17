@@ -1,0 +1,48 @@
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>JS LAB 2 </title>
+<script type="text/javascript">
+	var no1 =0;
+	var no2 = 0;
+	 var op="N" ;
+         console.log("!");
+	 function divnumbers(event){
+		
+		 console.log(event.srcElement.value)
+
+		 if (op==="N"){
+			 no1 = event.srcElement.value;
+			 op="@";
+		 } 
+		 else
+			 {
+			 no2 =  event.srcElement.value;
+			 op="N";
+			 }
+	console.log("no1 = " + no1 + ", no2 = " + no2 + " op = " + op) ;
+	}
+	function divop(event){
+		op = event.srcElement.value;
+		if(op==="+"){
+			var no=parseInt(no1)+parseInt(no2);
+			console.log("the result of addition is"+no);}
+		else{
+			var no=parseInt(no1)-parseInt(no2);
+			console.log("the result of subtraction is"+no);}
+	}
+
+</script>
+</head>
+<body >
+<div id="numbers" onclick="divnumbers(event)">
+    <input type="button" value="1" /><input type="button" value="2" /><input type="button" value="3" /><br/>
+    <input type="button" value="4" /><input type="button" value="5" /><input type="button" value="6" /><br/>
+    <input type="button" value="7" /><input type="button" value="8" /><input type="button" value="9" /><br/>
+    <input type="button" value="0" /><br/>
+  </div>
+    <span onclick="divop(event)"><input type="button" value="+" /><input type="button" value="-" /><input type="button" value="=" /></span><br/>
+
+
+</body>
+</html>
