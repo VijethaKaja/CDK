@@ -1,0 +1,22 @@
+CREATE:
+
+create table person (pid number(10),name varchar(20), city varchar(30), state varchar(30),bdate date,aadhaar number(12), pan varchar(15));
+
+INSERT:
+
+insert into person values(1,'Vijetha','Hyderabad','AndhraPradesh',to_date('12-03-1999','dd-mm-yyyy'),123456789991,xbsuso1233);
+insert into person values(2,'Samyukta','Kakinada','AndhraPradesh',to_date('19-08-1999','dd-mm-yyyy'),472629010100,wgxuxi1388);
+insert into person values(3,'Thrylokya','Vijayawada','AndhraPradesh',to_date('18-02-1998','dd-mm-yyyy'),358201231873,xgdie2764);
+insert into person values(4,'Charishma','Hyderabad','Telangana',to_date('15-03-1988','dd-mm-yyyy'),5724191073820,263bs38134);
+insert into person values(5,'Prabhasna','Bangalore','Karnataka',to_date('13-12-1992','dd-mm-yyyy'),720228719021,1836xv28389);
+insert into person values(6,'Sushmitha','Bangalore','Karnataka',to_date('09-02-1997','dd-mm-yyyy'),2472020203062,vvye82892);
+
+UPDATE:
+
+update person set name='sravya',city='Hyderabad',state='Telanagana',date=to_date('13-12-1999','dd-mm-yyyy'),aadhaar=739929199123 where pid=5;
+update person set city='Hyderabad',state='Telangana' where state='AndhraParadesh';
+
+DELETE:
+
+delete from person where name='Vijetha';
+delete from person where state='karnataka';
