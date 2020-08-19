@@ -1,5 +1,5 @@
 Display the information of the people who have maximum people reporting to them.
-  select max(count(mgr)) from emp group by mgr;
+  select empno,ename,sal,mgr from emp where empno=(select mgr from emp group by mgr having count(*)=(select max(count(*)) from emp group by mgr));
 Find out the department in which no employee is working.
   select * from dept where deptno not in (select deptno from emp);
 Display the information of the people who have no people reporting to them.
