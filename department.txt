@@ -1,0 +1,10 @@
+select * from dept where ename like 'a%';
+select * from dept where ename like '%a';
+select * from dept where ename like '_s%';
+select * from dept where salary > 600;
+select * from dept where salary < 200;
+select * from dept where dept='IT';
+select * from dept where dept in ( 'IT' , 'FN');
+
+
+
