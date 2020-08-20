@@ -1,0 +1,15 @@
+create or replace function reporting(res number) return number is
+ans number(3):=0;
+begin
+select count(*) into ans from emp where mgr=res;
+return ans;
+end;
+/
+
+DECLARE 
+   c number(2):=0;
+BEGIN 
+   c := reporting(7839); 
+   dbms_output.put_line('Total no. of reporting employees: ' || c); 
+END; 
+/
