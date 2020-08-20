@@ -1,0 +1,21 @@
+accept loc from user and delete all the records from Dept for that loc
+
+DECLARE
+ v_loc dept.loc%TYPE := &loc;
+BEGIN
+  delete from dept where loc=v_loc;
+  dbms_output.put_line('Deleted ...');
+END;
+/
+
+accept deptno, dname and loc and modify that record
+
+DECLARE
+ v_deptno dept.deptno%TYPE :=&deptno;
+ v_dname dept.dname%TYPE  := &dname;
+ v_loc dept.loc%TYPE := &loc;
+BEGIN
+  update dept set deptno=20,dname='vijetha',loc='chicago' where deptno=v_deptno,dname=v_dname,loc=v_loc;
+  dbms_output.put_line('Updated ...');
+END;
+/
