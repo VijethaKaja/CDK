@@ -1,0 +1,45 @@
+Dept	Dname			loc
+10		Accounting		NewYork
+		Employees working in 
+			name1, name2,name3
+20		Research		DALLAS
+		Employees working in 
+			name4, name4,name4
+30
+
+
+40
+	Employee not found
+
+
+DECLARE
+ CURSOR c_dept IS  select deptno, dname, loc from Dept;
+ v_deptno dept.deptno%TYPE ;
+ v_dname dept.dname%TYPE  ;
+ v_loc dept.loc%TYPE ;
+ em emp.ename%TYPE;
+ ex exception;
+ CURSOR empp IS  select ename from emp where deptno=v_deptno;
+begin
+    dbms_output.put_line('in begin of deptlist'); 
+	OPEN c_dept; 
+	LOOP 
+		FETCH c_dept INTO v_deptno, v_dname,v_loc;
+	    if c_dept%notfound then
+	    raise ex;
+	    end if;
+		dbms_output.put_line('Data = '  || v_deptno || ', ' ||v_dname || ', ' || v_loc); 
+		OPEN empp;
+		dbms_output.put_line('Employees are');
+		LOOP 
+		    FETCH empp INTO em ;
+		    EXIT WHEN empp%notFound;
+		    dbms_output.put_line(em);
+		END LOOP;
+	close empp;
+	END LOOP; 
+EXCEPTION 
+   WHEN ex THEN 
+      dbms_output.put_line('No records'); 
+END;
+/
