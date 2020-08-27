@@ -1,7 +1,7 @@
 import java.util.Scanner;
-import BookAsiignment.pack1.Book;
-import BookAssignment.pack2.BookNotFoundException;
-import BookAssignment.pack3.BookStoreimp;
+import BookAssignment.pack1.Book;
+import BookAssignment.pack3.BookNotFoundException;
+import BookAssignment.pack2.BookStoreimp;
 public class TestBookStore {
 
 	public static void main(String[] args) {
