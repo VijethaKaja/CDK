@@ -1,12 +1,13 @@
-package BookAssignment.pack3;
+package BookAssignment.pack2;
 import java.util.Scanner;
 
-import BookAsiignment.pack1.Book;
+import BookAssignment.pack1.Book;
 public class BookStoreimp implements BookStore {
 	public long ISBN;
 	public double price;
 	public int num,n=0;
 	public String name,author,publication;
+	@Override
 	public Book[] getBooks()
 	{
 		Book[] b=new Book[5];
@@ -18,6 +19,7 @@ public class BookStoreimp implements BookStore {
 	
 		return b;
 	}
+	@Override
 	public Book findBookById(long id) {
 		Book b = null;
 		for (Book i : getBooks()) {
@@ -28,7 +30,7 @@ public class BookStoreimp implements BookStore {
 		}
 		return b;
 	}
-
+	@Override
 	public Book updateBook(long id, double price) {
 		Book b = findBookById(id);
 		if (b != null) {
